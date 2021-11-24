@@ -14,6 +14,7 @@ public class SettingsController {
     public SettingsController() {
     }
 
+    // Pre-fills the bitrate, channel setting and sampling rate from 'settings.ini'
     public void initialize() throws IOException {
         Ini ini = new Ini(new File("settings.ini"));
         bitrateSelection.setValue(String.valueOf(Integer.parseInt(ini.get("Settings", "bitrate")) / 1000));
@@ -21,6 +22,7 @@ public class SettingsController {
         samplingSelection.setValue(ini.get("Settings", "samplingRate"));
     }
 
+    // Saves the new settings into 'settings.ini'
     @FXML
     public void saveSettings() throws IOException {
         Ini ini = new Ini(new File("settings.ini"));
@@ -30,6 +32,7 @@ public class SettingsController {
         ini.store();
     }
 
+    // Resets to default settings of choice in the application
     @FXML
     public void resetSettings() throws IOException {
         bitrateSelection.setValue("192");

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bitrateConverter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bitrateConverter_jar</output-path>
+    <root id="archive" name="bitrateConverter.jar">
+      <element id="module-output" name="bitrateConverter" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ini4j-0.5.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mp3agic-0.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slf4j-api-2.0.0-alpha5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jave-all-deps-3.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jave-core-3.2.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

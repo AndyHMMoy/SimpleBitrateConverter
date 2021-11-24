@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="225.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsController">
+   <children>
+      <Label layoutX="40.0" layoutY="62.0" text="Bitrate : ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="bitrateSelection" layoutX="156.0" layoutY="60.0" prefWidth="150.0" promptText="- Bitrate - ">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="64" />
+                  <String fx:value="128" />
+                  <String fx:value="192" />
+                  <String fx:value="256" />
+                  <String fx:value="320" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Label layoutX="40.0" layoutY="95.0" text="Channels : ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="channelSelection" layoutX="156.0" layoutY="93.0" prefWidth="150.0" promptText="- Channels -">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="1" />
+                  <String fx:value="2" />
+                  <String fx:value="4" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Label layoutX="40.0" layoutY="129.0" text="Sampling Rate : ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="samplingSelection" layoutX="156.0" layoutY="127.0" prefWidth="150.0" promptText="- Sampling Rate -">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="8000" />
+                  <String fx:value="16000" />
+                  <String fx:value="24000" />
+                  <String fx:value="32000" />
+                  <String fx:value="44100" />
+                  <String fx:value="48000" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Button onAction="#saveSettings" layoutX="239.0" layoutY="171.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Save" />
+      <Button onAction="#resetSettings" layoutX="40.0" layoutY="171.0" mnemonicParsing="false" text="Reset To Default" />
+      <Label layoutX="42.0" layoutY="20.0" text="Settings">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
